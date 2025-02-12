@@ -1,13 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url("https://raw.githubusercontent.com/tasnova83/hexaweb/075d695a5f95cc2561ba2fa788998ed072de7ee9/background.jpg");
-
+    background-image: url("https://raw.githubusercontent.com/tasnova83/hexaweb/main/background.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
+
 /* 🔹 Logo Styles */
 .logo {
     position: absolute;
@@ -20,7 +24,6 @@ body {
     height: auto;
 }
 
-
 header {
     color: white;
     padding: 15px;
@@ -29,20 +32,20 @@ header {
 
 .navbar {
     display: flex;
-    justify-content: flex-end; /* Move items to the right */
+    justify-content: flex-end;
     align-items: center;
     padding: 15px 30px;
-    background: transparent; /* Remove background */
-    position: absolute; /* Keep it on top */
+    background: transparent;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 90%;
+    width: 100%; /* 🔹 Fix: Set full width */
 }
 
 .navbar ul {
     list-style: none;
     display: flex;
-    gap: 25px; /* Space between menu items */
+    gap: 25px;
 }
 
 .navbar ul li {
@@ -57,8 +60,10 @@ header {
 }
 
 .navbar ul li a:hover {
-    color: #ca09db; /* Purple hover effect */
+    color: #ca09db;
 }
+
+/* 🔹 Hero Section */
 .hero {
     height: 80vh;
     display: flex;
@@ -76,11 +81,10 @@ header {
     margin-left: 50px;
 }
 
-/* Heading Styles */
-.hero h1{
+.hero h1 {
     font-size: 1.5rem;
     font-weight: 300;
-    color: #ffffff; /* Static Text */ 
+    color: #ffffff;
 }
 
 .hero-content h2, .hero-content h3 {
@@ -102,18 +106,18 @@ header {
 }
 
 .hero-content p {
-        font-size: 1.2rem;
-        color: #bbb;
-        line-height: 1.5;
-    }
-    .hero-image img {
-        width: 350px;
-        border-radius: 10px;
-        opacity: 0;
-        transform: translateY(50px);
-        animation: slideUp 1s ease-in-out forwards 0.5s;
-    }
-    
+    font-size: 1.2rem;
+    color: #bbb;
+    line-height: 1.5;
+}
+
+.hero-image img {
+    width: 350px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 1s ease-in-out forwards 0.5s;
+}
 
 /* 🔹 Animations */
 @keyframes slideIn {
@@ -138,7 +142,7 @@ header {
     }
 }
 
-/* Button Effect */
+/* 🔹 Gmail Button */
 .gmail-btn {
     display: block;
     position: fixed;
@@ -146,7 +150,7 @@ header {
     right: 20px;
     width: 60px;
     height: 60px;
-    background: url('https://github.com/tasnova83/hexaweb/blob/main/gmail.png') no-repeat center;
+    background: url('https://raw.githubusercontent.com/tasnova83/hexaweb/main/gmail.png') no-repeat center;
     background-size: cover;
     border-radius: 50%;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
@@ -157,7 +161,7 @@ header {
     transform: scale(1.1);
 }
 
-/* Tooltip Styling */
+/* Tooltip */
 .tooltip {
     position: absolute;
     bottom: 70px;
@@ -177,53 +181,20 @@ header {
     opacity: 1;
 }
 
-/* Keyframe Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideUp {
-    from {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes bounce {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-10px);
-    }
-}
-
+/* 🔹 Social Section */
 .social-section {
-    text-align: left; /* Left side e align */
+    text-align: left;
     margin-top: 30px;
-    margin-left: 30px; /* Left e move korte */
+    margin-left: 30px;
 }
 
-/* Find with me text */
 .social-section h3 {
     font-size: 1.5rem;
     color: white;
-    position: relative;
-    display: inline-block;
     text-shadow: 0 0 5px #800080, 0 0 10px #800080, 0 0 15px #800080;
     margin-bottom: 15px;
 }
 
-/* Underline effect */
 .social-section h3::after {
     content: "";
     position: absolute;
@@ -231,20 +202,18 @@ header {
     bottom: -5px;
     width: 100%;
     height: 2px;
-    background: #9b59b6; /* Purple underline */
+    background: #9b59b6;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 0 10px #9b59b6; /* Glow effect */
+    box-shadow: 0 0 10px #9b59b6;
 }
 
-/* Hover effect */
 .social-section h3:hover::after {
     box-shadow: 0 0 15px #9b59b6, 0 0 30px #9b59b6;
 }
 
-/* Social icons */
 .social-icons {
     display: flex;
-    gap: 15px; /* Icons এর মধ্যে gap */
+    gap: 15px;
     align-items: center;
 }
 
@@ -259,11 +228,11 @@ header {
     border-radius: 50%;
 }
 
-/* Hover effect on icons */
 .social-icons a:hover {
     transform: scale(1.2);
 }
 
+/* 🔹 Services Section */
 .services {
     text-align: center;
     padding: 50px 10%;
